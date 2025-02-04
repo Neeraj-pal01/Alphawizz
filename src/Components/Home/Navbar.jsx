@@ -7,12 +7,12 @@ export default function Navbar() {
     <>
       <nav className=''>
         <div className=''>
-          <div className='flex justify-around items-center h-28 text-xl'>
+          <div className='flex justify-around items-center h-28 '>
             <NavLink><img className='w-44 object-cover' src={logo2} alt="" /></NavLink>
             <ul className='flex gap-9 '>
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>Home</NavLink>
-                <ul className=' bg-white mt-6 absolute top-full p-4 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-lg *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white mt-6 absolute z-10 top-full p-4 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-lg *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>Homepage-1</li>
                   <li>Homepage-2</li>
                   <li>Homepage-3</li>
@@ -26,9 +26,9 @@ export default function Navbar() {
 
 
               
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>About</NavLink>
-                <ul className=' bg-white mt-6 absolute top-full p-3 invisible group-hover:visible flex flex-col opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white mt-6 absolute z-10 top-full p-3 invisible group-hover:visible flex flex-col opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>About Us - 1</li>
                   <li>About Us - 2</li>
                   <li>About Us - 3</li>
@@ -37,9 +37,9 @@ export default function Navbar() {
               </li>
 
 
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>Payment</NavLink>
-                <ul className=' bg-white mt-6 absolute top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white mt-6 absolute z-10 top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>Homepage-1</li>
                   <li>Homepage-2</li>
                   <li>Homepage-3</li>
@@ -52,9 +52,9 @@ export default function Navbar() {
               </li>
 
 
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>Portfolio</NavLink>
-                <ul className=' bg-white mt-6 absolute top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white mt-6 absolute z-10 top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>Homepage-1</li>
                   <li>Homepage-2</li>
                   <li>Homepage-3</li>
@@ -67,9 +67,9 @@ export default function Navbar() {
               </li>
 
 
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>Career</NavLink>
-                <ul className=' bg-white mt-6 absolute top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white mt-6 absolute z-10 top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>Homepage-1</li>
                   <li>Homepage-2</li>
                   <li>Homepage-3</li>
@@ -80,9 +80,9 @@ export default function Navbar() {
                   <li>Homepage-8</li>
                 </ul>
               </li>
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>Gallery</NavLink>
-                <ul className=' bg-white absolute mt-6 top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white absolute z-10 mt-6 top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>Homepage-1</li>
                   <li>Homepage-2</li>
                   <li>Homepage-3</li>
@@ -93,9 +93,9 @@ export default function Navbar() {
                   <li>Homepage-8</li>
                 </ul>
               </li>
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>Services</NavLink>
-                <ul className=' bg-white absolute top-full mt-6 p-3 invisible group-hover:visible flex flex-col  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white absolute z-10 top-full mt-6 p-3 invisible group-hover:visible flex flex-col  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>Mobile App Development</li>
                   <li>Website Development</li>
                   <li>Ecommerce Website Design</li>
@@ -104,9 +104,9 @@ export default function Navbar() {
                 </ul>
               </li>
 
-              <li className='group relative flex items-center justify-center flex-col *:first:hover:text-[#006D77]'>
+              <li className='group relative flex items-center justify-center flex-col *:first:text-xl *:first:hover:text-[#006D77]'>
                 <NavLink>Contact Us</NavLink>
-                <ul className=' bg-white absolute mt-6 top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
+                <ul className=' bg-white absolute z-10 mt-6 top-full p-3 invisible group-hover:visible grid grid-cols-2  opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out items-center justify-center min-w-64 gap-5 shadow-lg rounded-2xl *:hover:text-[#006D77] *:hover:pl-1 '>
                   <li>Homepage-1</li>
                   <li>Homepage-2</li>
                   <li>Homepage-3</li>
