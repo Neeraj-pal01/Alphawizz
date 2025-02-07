@@ -12,6 +12,9 @@
       transform: translateX(0px);
     }
   }
+  .anime{
+      animation: bannerAnimetion 3s linear infinite alternate;
+  }
 @keyframes bannerAnimetion2 {
     0% {
       transform: translateY(50px);
@@ -23,9 +26,7 @@
       transform: translateY(0px);
     }
   }
-.anime{
-    animation: bannerAnimetion 3s linear infinite alternate;
-}
 .anime2{
+    
     animation: bannerAnimetion2 3s linear infinite alternate;
 }
