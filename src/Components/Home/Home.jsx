@@ -21,7 +21,9 @@ import img3 from '../../assets/img/animation.jpg'
 import img4 from '../../assets/img/userExperience.jpg'
 import img5 from '../../assets/img/socialNetwork.jpg'
 import img6 from '../../assets/img/marketing.jpg'
+import chart from '../../assets/img/chart.png'
 import Swiper from '../swiper/Swiper'
+import '../../App.css'
 
 
 
@@ -217,157 +219,170 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className='bg-[#006D77] py-10'>
-        <div className='w-2/3 mx-auto flex flex-col items-center gap-10'>
-          <h1 className='text-5xl w-3/5 mx-auto text-white text-center font-bold'>Choose The Best Plan That's For You</h1>
-          <div className='text-white flex justify-center items-center gap-4'>
-            <span>Billed Monthly</span>
-            <button onClick={() => SetBtnClk(!btnClk)} aria-pressed={btnClk} className=' bg-white relative group w-14 h-7 rounded-full flex items-center'> <span className='bg-[#101828]  absolute rounded-full w-5 h-5 left-1 group-aria-pressed:translate-x-7 transition-all duration-300'></span></button>
-            <span>Bill Annually</span>
+      <section className='flex flex-col gap-10'>
+        <div className='bg-[#006D77] py-10'>
+          <div className='w-2/3 mx-auto flex flex-col items-center gap-10'>
+            <h1 className='text-5xl w-3/5 mx-auto text-white text-center font-bold'>Choose The Best Plan That's For You</h1>
+            <div className='text-white flex justify-center items-center gap-4'>
+              <span>Billed Monthly</span>
+              <button onClick={() => SetBtnClk(!btnClk)} aria-pressed={btnClk} className=' bg-white relative group w-14 h-7 rounded-full flex items-center'> <span className='bg-[#101828]  absolute rounded-full w-5 h-5 left-1 group-aria-pressed:translate-x-7 transition-all duration-300'></span></button>
+              <span>Bill Annually</span>
+            </div>
+            <div className='grid grid-cols-3 gap-5'>
+              {/* 1st */}
+              <div className='bg-white rounded-2xl p-7 flex flex-col gap-6 shadow-2xl'>
+                <h2 className='text-3xl font-bold'>{btnClk ? `$${35 * 12}` : "$35"}<span className='text-sm font-normal text-gray-500'>{btnClk ? "/year" : "/month"}</span> </h2>
+                <p className='text-[#101828] font-bold text-2xl'>Standard</p>
+                <p className='text-gray-400 pb-5 text-xs font-semibold border-b border-gray-300'>All the basics for businesses that are just getting started.</p>
+
+                <ul className='list-disc pl-5 flex flex-col gap-5 text-xs font-semibold text-[#101828]'>
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Unlimited updates
+                  </li>
+
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Custom permissions
+                  </li>
+
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-white rounded-full border border-gray-500 flex items-center justify-center w-5 h-5 text-gray-500'>
+                      <span>X</span>
+                    </span>
+                    Custom designs & features
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-white rounded-full border border-gray-500 flex items-center justify-center w-5 h-5 text-gray-500'>
+                      <span>X</span>
+                    </span>
+                    Custom hashtags
+                  </li>
+                </ul>
+                <button className='mt-5 font-bold text-xl border border-[#101828] p-2 bg-white text-[#101828] rounded-xl hover:bg-[#101828] hover:text-white transition-colors duration-300 ease-in-out'>Get Started →</button>
+              </div>
+
+              {/* 2nd */}
+              <div className='bg-white rounded-2xl p-7 flex flex-col gap-6 shadow-2xl'>
+                <h2 className='text-3xl font-bold'>{btnClk ? `$${89 * 12}` : "$89"}<span className='text-sm font-normal text-gray-500'>{btnClk ? "/year" : "/month"}</span> </h2>
+                <p className='text-[#101828] font-bold text-2xl'>Essentials</p>
+                <p className='text-gray-400 pb-5 text-xs font-semibold border-b border-gray-300'>All the basics for businesses that are just getting started.</p>
+
+                <ul className='list-disc pl-5 flex flex-col gap-5 text-xs font-semibold text-[#101828]'>
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Unlimited updates
+                  </li>
+
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Custom permissions
+                  </li>
+
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Custom designs & features
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-white rounded-full border border-gray-500 flex items-center justify-center w-5 h-5 text-gray-500'>
+                      <span>X</span>
+                    </span>
+                    Custom hashtags
+                  </li>
+                </ul>
+                <button className='mt-5 font-bold text-xl border border-[#101828] p-2 bg-white text-[#101828] rounded-xl hover:bg-[#101828] hover:text-white transition-colors duration-300 ease-in-out'>Get Started →</button>
+              </div>
+
+              {/* 3rd */}
+              <div className='bg-white rounded-2xl p-7 flex flex-col gap-6 shadow-2xl'>
+                <h2 className='text-3xl font-bold'>{btnClk ? `$${125 * 12}` : "$125"}<span className='text-sm font-normal text-gray-500'>{btnClk ? "/year" : "/month"}</span> </h2>
+                <p className='text-[#101828] font-bold text-2xl'>Premium</p>
+                <p className='text-gray-400 pb-5 text-xs font-semibold border-b border-gray-300'>All the basics for businesses that are just getting started.</p>
+
+                <ul className='list-disc pl-5 flex flex-col gap-3 text-xs font-semibold text-[#101828]'>
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Unlimited updates
+                  </li>
+
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Custom permissions
+                  </li>
+
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Custom designs & features
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Custom hashtags
+                  </li>
+                  <li className='flex items-center gap-2'>
+                    <span className='bg-blue-500 rounded-full '>
+                      <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
+                        <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
+                      </svg>
+                    </span>
+                    Custom instructors
+                  </li>
+                </ul>
+                <button className='mt-4 font-bold text-xl border border-[#101828] p-2 bg-white text-[#101828] rounded-xl hover:bg-[#101828] hover:text-white transition-colors duration-300 ease-in-out'>Get Started →</button>
+              </div>
+            </div>
           </div>
-          <div className='grid grid-cols-3 gap-5'>
-            {/* 1st */}
-            <div className='bg-white rounded-2xl p-7 flex flex-col gap-6 shadow-2xl'>
-              <h2 className='text-3xl font-bold'>{btnClk ? `$${35 * 12}` : "$35"}<span className='text-sm font-normal text-gray-500'>{btnClk ? "/year" : "/month"}</span> </h2>
-              <p className='text-[#101828] font-bold text-2xl'>Standard</p>
-              <p className='text-gray-400 pb-5 text-xs font-semibold border-b border-gray-300'>All the basics for businesses that are just getting started.</p>
 
-              <ul className='list-disc pl-5 flex flex-col gap-5 text-xs font-semibold text-[#101828]'>
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Unlimited updates
-                </li>
-
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Custom permissions
-                </li>
-
-                <li className='flex items-center gap-2'>
-                  <span className='bg-white rounded-full border border-gray-500 flex items-center justify-center w-5 h-5 text-gray-500'>
-                    <span>X</span>
-                  </span>
-                  Custom designs & features
-                </li>
-                <li className='flex items-center gap-2'>
-                  <span className='bg-white rounded-full border border-gray-500 flex items-center justify-center w-5 h-5 text-gray-500'>
-                    <span>X</span>
-                  </span>
-                  Custom hashtags
-                </li>
-              </ul>
-              <button className='mt-5 font-bold text-xl border border-[#101828] p-2 bg-white text-[#101828] rounded-xl hover:bg-[#101828] hover:text-white transition-colors duration-300 ease-in-out'>Get Started →</button>
-            </div>
-
-            {/* 2nd */}
-            <div className='bg-white rounded-2xl p-7 flex flex-col gap-6 shadow-2xl'>
-              <h2 className='text-3xl font-bold'>{btnClk ? `$${89 * 12}` : "$89"}<span className='text-sm font-normal text-gray-500'>{btnClk ? "/year" : "/month"}</span> </h2>
-              <p className='text-[#101828] font-bold text-2xl'>Essentials</p>
-              <p className='text-gray-400 pb-5 text-xs font-semibold border-b border-gray-300'>All the basics for businesses that are just getting started.</p>
-
-              <ul className='list-disc pl-5 flex flex-col gap-5 text-xs font-semibold text-[#101828]'>
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Unlimited updates
-                </li>
-
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Custom permissions
-                </li>
-
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Custom designs & features
-                </li>
-                <li className='flex items-center gap-2'>
-                  <span className='bg-white rounded-full border border-gray-500 flex items-center justify-center w-5 h-5 text-gray-500'>
-                    <span>X</span>
-                  </span>
-                  Custom hashtags
-                </li>
-              </ul>
-              <button className='mt-5 font-bold text-xl border border-[#101828] p-2 bg-white text-[#101828] rounded-xl hover:bg-[#101828] hover:text-white transition-colors duration-300 ease-in-out'>Get Started →</button>
-            </div>
-
-            {/* 3rd */}
-            <div className='bg-white rounded-2xl p-7 flex flex-col gap-6 shadow-2xl'>
-              <h2 className='text-3xl font-bold'>{btnClk ? `$${125 * 12}` : "$125"}<span className='text-sm font-normal text-gray-500'>{btnClk ? "/year" : "/month"}</span> </h2>
-              <p className='text-[#101828] font-bold text-2xl'>Premium</p>
-              <p className='text-gray-400 pb-5 text-xs font-semibold border-b border-gray-300'>All the basics for businesses that are just getting started.</p>
-
-              <ul className='list-disc pl-5 flex flex-col gap-3 text-xs font-semibold text-[#101828]'>
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Unlimited updates
-                </li>
-
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Custom permissions
-                </li>
-
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Custom designs & features
-                </li>
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Custom hashtags
-                </li>
-                <li className='flex items-center gap-2'>
-                  <span className='bg-blue-500 rounded-full '>
-                    <svg className='text-white w-5 h-5' fill='currentColor' viewBox='0 0 24 24'>
-                      <path d='M9 12l2 2 4-4 1.41 1.41L11 16.83 7.59 13.41z'></path>
-                    </svg>
-                  </span>
-                  Custom instructors
-                </li>
-              </ul>
-              <button className='mt-5 font-bold text-xl border border-[#101828] p-2 bg-white text-[#101828] rounded-xl hover:bg-[#101828] hover:text-white transition-colors duration-300 ease-in-out'>Get Started →</button>
-            </div>
-
-
+        </div>
+        <div className='w-3/4 mx-auto py-5 rounded-2xl bg-[#FFF3EA] flex'>
+          <div className='w-[40%] p-5 px-10 flex flex-col gap-7'>
+            <span className='text-gray-600'>NEWSLETTER</span>
+            <h1 className='text-5xl font-bold text-[#101828]'>Subscribe our newsletter</h1>
+            <p>By clicking the button, you are agreeing with our
+              <span className='text-[#1B6F70] hover:text-[#78b8b9] p-1'>Term & Conditions</span></p>
+              <div className='relavtive bg-white rounded-full'><input className='p-5 w-[80%]  bg-white z-0 outline-none rounded-full' type="Email" placeholder='Enter Your Email' /><span className='p-2 px-3 font-bold text-2xl  z-10 bg-[#1B6F70] text-white  rounded-full'> →</span></div>
+          </div>
+          <div className='w-[60%] flex items-center relative'>
+            <img className='rounded-2xl absolute z-10 anime2 h-48 max-w-64 object-cover' src={chart} alt="" />
+            <img className='rounded-2xl absolute z-0 right-[20%] -bottom-[20%]  h-full max-w-80 object-cover' src={photo} alt="" />
           </div>
         </div>
-
-      </div>
+      </section>
     </>
   )
 }
